@@ -125,23 +125,14 @@ const skillGroups = [
 
 const projects = [
   {
-    name: 'Cafe GP',
-    category: 'Web Development',
-    status: 'In development',
-    type: 'Web Development',
-    accent: 'cyan',
-    description:
-      'A cafe-cum-MotoGP web platform combining business identity with an engaging digital experience for racing fans.',
-    stack: ['Next.js', 'React', 'Azure'],
-    details:
-      'Currently implementing leaderboards, rider profiles, rankings, and responsive interactive experiences. Unfinished features are intentionally marked as planned or in progress.',
-  },
-  {
     name: 'EduBridge',
     category: 'Education',
-    status: 'Completed concept',
-    type: 'Frontend',
+    status: 'In development',
+    type: ['Backend & Full Stack', 'UI/UX'],
     accent: 'violet',
+    image: '',
+    github: '',
+    live: '',
     description:
       'A centralized learning platform with structured subject navigation, categorized layouts, and reusable accessible UI components.',
     stack: ['HTML', 'CSS', 'Tailwind CSS'],
@@ -151,9 +142,12 @@ const projects = [
   {
     name: 'SwasthyaSetu',
     category: 'Healthcare',
-    status: 'Completed concept',
-    type: 'UI/UX',
+    status: 'In development',
+    type: ['Backend & Full Stack', 'UI/UX'],
     accent: 'lime',
+    image: '',
+    github: '',
+    live: '',
     description:
       'A health awareness platform built to deliver structured, readable, and user-friendly informational content.',
     stack: ['HTML', 'CSS', 'Tailwind CSS'],
@@ -163,14 +157,92 @@ const projects = [
   {
     name: 'SkillSwap',
     category: 'Community',
-    status: 'Completed concept',
-    type: 'Frontend',
+    status: 'In development',
+    type: ['Backend & Full Stack', 'UI/UX', 'Community'],
     accent: 'orange',
+    image: '',
+    github: '',
+    live: '',
     description:
       'A peer-to-peer skill exchange platform for discovering people, profiles, and opportunities to learn together.',
     stack: ['HTML', 'CSS', 'Tailwind CSS'],
     details:
       'Explored categorized profiles, skill listings, and intuitive interactions that make community discovery feel lightweight and welcoming.',
+  },
+  {
+    name: 'AegisRAG',
+    category: 'AI / GenAI',
+    status: 'Completed',
+    type: 'AI Application',
+    accent: 'violet',
+    image: '',
+    github: '',
+    live: '',
+    description:
+      'A query-adaptive PDF Q&A system that intelligently classifies user questions and dynamically adjusts retrieval depth to generate grounded answers from source documents.',
+    stack: ['Python', 'FAISS', 'Streamlit', 'HuggingFace'],
+    details:
+      'Uses intelligent query classification, dynamic retrieval depth, and semantic search to provide more relevant answers from PDF content instead of relying on fixed-context retrieval.',
+  },
+  {
+    name: 'E-Commerce Sales Dashboard',
+    category: 'Data Analytics',
+    status: 'Completed',
+    type: 'Business Intelligence',
+    accent: 'amber',
+    image: '',
+    github: '',
+    live: '',
+    description:
+      'An interactive Power BI dashboard that transforms raw e-commerce sales data into actionable business insights across revenue, profit, regions, products, and customer behavior.',
+    stack: ['Power BI', 'DAX', 'Power Query', 'Data Modeling'],
+    details:
+      'Built an end-to-end BI layer with data cleaning, transformation, modeling, and DAX-powered KPIs to analyze sales performance, regional trends, product performance, and customer behavior.',
+  },
+  {
+    name: 'Backend-Auth',
+    category: 'AI / GenAI',
+    status: 'Completed',
+    type: ['Backend & Full Stack', 'Cloud & Azure'],
+    accent: 'cyan',
+    image: '',
+    github: '',
+    live: '',
+    description:
+      'An internal organization knowledge assistant with secure Microsoft login, document search, chat history management, Gemini API integration, and a chatbot interface for business teams.',
+    stack: ['Next.js', 'Azure', 'SQL Server', 'Microsoft Auth', 'Gemini API', 'Node.js'],
+    details:
+      'Built a secure internal chatbot with Microsoft-based login, toggle mode, document search, new-chat creation, delete chat history, chat history persistence, Gemini API integration, and Azure + SQL Server-backed storage for team knowledge workflows.',
+  },
+  {
+    name: 'Frontend-Auth',
+    category: 'AI / GenAI',
+    status: 'Completed',
+    type: ['Frontend & Full Stack', 'Cloud & Azure'],
+    accent: 'cyan',
+    image: '',
+    github: '',
+    live: '',
+    description:
+      'A frontend authentication and chatbot experience with Microsoft login, chat history, a toggle mode, and Gemini-powered responses for internal usage.',
+    stack: ['Next.js', 'Azure', 'SQL Server', 'Microsoft Auth', 'Gemini API', 'Node.js'],
+    details:
+      'Implemented Microsoft login, mode switching, chat history management, add-new-chat, delete-chat actions, and AI-assisted conversations, while using Azure and SQL Server for backend integration and persistence. This version excludes document search, which was handled separately in the backend-auth flow.',
+  },
+  {
+    name: 'MotoCafe',
+    category: 'Web Development',
+    status: 'In development',
+    type: ['Frontend', 'Cloud & Azure','Community'],
+    accent: 'cyan',
+    image: '/profile.png',
+    github: '',
+    live: '',
+    description:
+      'A community-driven member portal and cafe platform where users can create accounts, log in, manage profiles, and access role-based community features.',
+    stack: ['Next.js', 'React', 'OAuth', 'Authorization', 'API Integration', 'Azure'],
+    details:
+      'Led the frontend implementation for account creation, login, OAuth-based authentication, role and access authorization, community pages, member portal views, and profile management. I also connected the frontend to backend APIs, while the backend team and database team handled the server-side and data layer responsibilities.',
   },
 ]
 
@@ -178,7 +250,7 @@ const experiences = [
   {
     role: 'System Engineer',
     company: 'Surelia Info Systems Private Limited',
-    date: 'Current role',
+    date: 'August 2026 – Current',
     text:
       'Full-time employee in structured training and project development. Gaining hands-on exposure to Azure, MSAL, Python, Next.js, SQL Server, Claude, Gemini, prompt engineering, and AI-assisted development.',
     current: true,
@@ -186,7 +258,7 @@ const experiences = [
   {
     role: 'Business Development Intern',
     company: 'Banao Technologies',
-    date: 'January 2026 – [End Date]',
+    date: 'January 2026 – June 2026',
     text:
       'Worked across professional outreach, communication, SEO, and workflow automation.',
   },
@@ -207,15 +279,78 @@ const experiences = [
 ]
 
 const certifications = [
-  'Claude Certification 1',
-  'Claude Certification 2',
-  'Oracle Cloud Infrastructure AI Foundations Associate — 98%',
-  'Power BI for Business Applications',
-  'Web Development Training',
-  'Free Python Course',
-  'Career Essentials in Software Development',
-  'Python Programming',
-  'Introduction to Programming',
+  {
+    title: 'AI Foundations Associate',
+    issuer: 'Oracle Cloud Infrastructure',
+    score: '98%',
+    description:
+      'Strengthened core AI and cloud fundamentals, including practical understanding of OCI AI concepts and digital transformation workflows.',
+    pdf: '/certificates/oci-ai-foundations.pdf',
+  },
+  {
+    title: 'Power BI for Business Applications',
+    issuer: 'Microsoft Elevate',
+    score: 'Completed',
+    description:
+      'Developed dashboards, business metrics, and data-driven reporting skills focused on business decision-making with Power BI.',
+    pdf: '/certificates/power-bi-business-applications.pdf',
+  },
+  {
+    title: 'Web Development Training',
+    issuer: 'Webstack Academy',
+    score: 'Completed',
+    description:
+      'Built responsive frontend skills using modern web technologies, layout design practices, and hands-on project development.',
+    pdf: '/certificates/web-development-training.pdf',
+  },
+  {
+    title: 'Claude Code: The Practical Guide',
+    issuer: 'Udemy',
+    score: 'Completed',
+    description:
+      'Explored practical AI-assisted development workflows and prompt-driven coding techniques to improve software delivery efficiency.',
+    pdf: '/certificates/claude-practical-guide.pdf',
+  },
+  {
+    title: 'Claude Code Masterclass: Code 5x Faster with Agentic AI',
+    issuer: 'Udemy',
+    score: 'Completed',
+    description:
+      'Learned agentic AI patterns for faster development cycles, task automation, and improved productivity in coding workflows.',
+    pdf: '/certificates/claude-masterclass.pdf',
+  },
+  {
+    title: 'Free Python Course',
+    issuer: 'GeeksforGeeks',
+    score: 'Completed',
+    description:
+      'Gained foundational Python programming knowledge, syntax understanding, and problem-solving skills for software development.',
+    pdf: '/certificates/free-python-course.pdf',
+  },
+  {
+    title: 'Career Essentials in Software Development',
+    issuer: 'Microsoft & LinkedIn',
+    score: 'Completed',
+    description:
+      'Covered software development foundations, professional readiness, and the practical habits needed for a modern engineering career.',
+    pdf: '/certificates/career-essentials-software-development.pdf',
+  },
+  {
+    title: 'Python Programming',
+    issuer: 'Reliance Foundation',
+    score: 'Completed',
+    description:
+      'Developed a stronger understanding of Python fundamentals, scripting, and applied programming concepts for technical work.',
+    pdf: '/certificates/python-programming.pdf',
+  },
+  {
+    title: 'Introduction to Programming',
+    issuer: 'freeCodeCamp (IBM SkillsBuild)',
+    score: 'Completed',
+    description:
+      'Built a solid base in programming concepts, logic, and beginner-friendly problem solving using structured learning paths.',
+    pdf: '/certificates/introduction-to-programming.pdf',
+  },
 ]
 
 export default function Page() {
@@ -287,11 +422,16 @@ export default function Page() {
     () =>
       projectFilter === 'All'
         ? projects
-        : projects.filter(
-            (project) =>
-              project.type === projectFilter ||
+        : projects.filter((project) => {
+            const projectTypes = Array.isArray(project.type)
+              ? project.type
+              : [project.type]
+
+            return (
+              projectTypes.includes(projectFilter) ||
               project.category === projectFilter
-          ),
+            )
+          }),
     [projectFilter]
   )
 
@@ -784,7 +924,10 @@ export default function Page() {
             {[
               'All',
               'Frontend',
+              'Frontend & Full Stack',
               'Web Development',
+              'Backend & Full Stack',
+              'Cloud & Azure',
               'UI/UX',
               'Education',
               'Healthcare',
@@ -811,25 +954,33 @@ export default function Page() {
                 key={project.name}
               >
                 <div className="project-art">
-                  <div className="art-window">
-                    <div className="window-bar">
-                      <i />
-                      <i />
-                      <i />
-                    </div>
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={`${project.name} preview`}
+                      className="project-image"
+                    />
+                  ) : (
+                    <div className="art-window">
+                      <div className="window-bar">
+                        <i />
+                        <i />
+                        <i />
+                      </div>
 
-                    <div className="art-lines">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
+                      <div className="art-lines">
+                        <span />
+                        <span />
+                        <span />
+                      </div>
 
-                    <div className="art-blocks">
-                      <b />
-                      <b />
-                      <b />
+                      <div className="art-blocks">
+                        <b />
+                        <b />
+                        <b />
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   <span className="project-index">
                     0{index + 1}
@@ -1005,20 +1156,22 @@ export default function Page() {
             {certifications.map((certificate, index) => (
               <button
                 className="cert-card"
-                key={certificate}
+                key={certificate.title}
                 onClick={() =>
                   setSelectedProject({
-                    name: certificate,
+                    name: `${certificate.title} - ${certificate.issuer}`,
                     category: 'Certification',
-                    status: 'Credential preview',
+                    status:
+                      certificate.score.includes('%')
+                        ? `Score: ${certificate.score}`
+                        : 'Completed',
                     type: 'Certification',
-                    accent:
-                      index % 2 ? 'violet' : 'cyan',
-                    description:
-                      'Certificate preview details are available on request. Credential IDs are shown only when available.',
-                    stack: ['View credential'],
+                    accent: index % 2 ? 'violet' : 'cyan',
+                    description: certificate.description,
+                    stack: [],
                     details:
-                      'This certification is part of Joshita’s ongoing professional development.',
+                      `Credential from ${certificate.issuer}. This certification reflects Joshita's ongoing professional learning in software, analytics, and AI.`,
+                    pdf: certificate.pdf,
                   })
                 }
               >
@@ -1028,7 +1181,11 @@ export default function Page() {
 
                 <Trophy />
 
-                <span>{certificate}</span>
+                <span>
+                  <strong>
+                    {certificate.title} - {certificate.issuer}
+                  </strong>
+                </span>
 
                 <ArrowUpRight />
               </button>
@@ -1289,6 +1446,16 @@ export default function Page() {
               {selectedProject.status}
             </span>
 
+            {selectedProject.image && (
+              <div className="modal-project-visual">
+                <img
+                  src={selectedProject.image}
+                  alt={`${selectedProject.name} preview`}
+                  className="modal-project-image"
+                />
+              </div>
+            )}
+
             <h2>{selectedProject.name}</h2>
 
             <p>{selectedProject.details}</p>
@@ -1299,15 +1466,50 @@ export default function Page() {
               ))}
             </div>
 
-            <button
-              className="button primary"
-              onClick={() =>
-                setSelectedProject(null)
-              }
-            >
-              Close details
-              <Check />
-            </button>
+            <div className="project-links">
+              {'pdf' in selectedProject && selectedProject.pdf ? (
+                <a
+                  href={selectedProject.pdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button primary project-link-button"
+                >
+                  View credential
+                </a>
+              ) : null}
+
+              {selectedProject.github && (
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button secondary project-link-button"
+                >
+                  GitHub
+                </a>
+              )}
+
+              {selectedProject.live && (
+                <a
+                  href={selectedProject.live}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button primary project-link-button"
+                >
+                  Live link
+                </a>
+              )}
+
+              <button
+                className="button primary project-link-button"
+                onClick={() =>
+                  setSelectedProject(null)
+                }
+              >
+                Close details
+                <Check />
+              </button>
+            </div>
           </div>
         </div>
       )}
