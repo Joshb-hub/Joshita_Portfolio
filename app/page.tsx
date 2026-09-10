@@ -4,6 +4,8 @@ import { FormEvent, useEffect, useMemo, useState } from 'react'
 import {
   ArrowUpRight,
   Check,
+  ChevronLeft,
+  ChevronRight,
   Code2,
   Command,
   Database,
@@ -191,7 +193,7 @@ const projects = [
     type: 'Business Intelligence',
     accent: 'amber',
     image: '',
-    github: '',
+    github: 'https://github.com/Joshb-hub/E-Commerce-Dashboard-Power-BI-Project',
     live: '',
     description:
       'An interactive Power BI dashboard that transforms raw e-commerce sales data into actionable business insights across revenue, profit, regions, products, and customer behavior.',
@@ -246,9 +248,16 @@ const projects = [
   },
 ]
 
+const powerBiDashboardImages = [
+  '/projects/power_bi_executive_overview.png',
+  '/projects/power_bi_product_performance.png',
+  '/projects/power_bi_regional_analysis.png',
+  '/projects/power_bi_customer_insights.png',
+]
+
 const experiences = [
   {
-    role: 'System Engineer',
+    role: 'Systems Engineer Trainee',
     company: 'Surelia Info Systems Private Limited',
     date: 'August 2026 – Current',
     text:
@@ -277,6 +286,21 @@ const experiences = [
       'Built responsive frontend experiences using React, JavaScript, Tailwind CSS, REST APIs, and Node.js.',
   },
 ]
+
+type ProjectModalItem = {
+  name: string
+  category: string
+  status: string
+  type: string | string[]
+  accent: string
+  image?: string
+  github?: string
+  live?: string
+  description: string
+  stack: string[]
+  details: string
+  pdf?: string
+}
 
 const certifications = [
   {
@@ -360,12 +384,20 @@ export default function Page() {
   const [activeSection, setActiveSection] = useState('Home')
   const [progress, setProgress] = useState(0)
   const [projectFilter, setProjectFilter] = useState('All')
-  const [selectedProject, setSelectedProject] = useState<
-    (typeof projects)[number] | null
-  >(null)
+  const [selectedProject, setSelectedProject] =
+    useState<ProjectModalItem | null>(null)
   const [commandOpen, setCommandOpen] = useState(false)
   const [sent, setSent] = useState(false)
   const [photoFailed, setPhotoFailed] = useState(false)
+  const [powerBiSlide, setPowerBiSlide] = useState(0)
+
+  const changePowerBiSlide = (direction: number) => {
+    setPowerBiSlide(
+      (current) =>
+        (current + direction + powerBiDashboardImages.length) %
+        powerBiDashboardImages.length
+    )
+  }
 
   useEffect(() => {
     const timer = window.setInterval(
@@ -481,13 +513,13 @@ export default function Page() {
           href="#home"
           onClick={() => goTo('Home')}
         >
-          <span>{profile.initials}</span>
+          <span className="brand-mark">
+            <img src="/logo.png" alt="Joshita logo" className="brand-logo" />
+          </span>
 
           <div>
             <strong>{profile.firstName}</strong>
-            <small>
-              {profile.titles[0]} · {profile.titles[1]}
-            </small>
+            <small>{profile.titles[0]}</small>
           </div>
         </a>
 
@@ -762,9 +794,8 @@ export default function Page() {
 
             <div className="about-text">
               <p className="lead">
-                I&apos;m a System Engineer and frontend-focused
-                developer passionate about making thoughtful,
-                accessible digital experiences.
+                I&apos;m a Systems Engineer Trainee passionate about
+                making thoughtful, accessible digital experiences.
               </p>
 
               <p>
@@ -948,77 +979,141 @@ export default function Page() {
           </div>
 
           <div className="project-grid">
-            {filteredProjects.map((project, index) => (
-              <article
-                className={`project-card ${project.accent}`}
-                key={project.name}
-              >
-                <div className="project-art">
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={`${project.name} preview`}
-                      className="project-image"
-                    />
+            {filteredProjects.map((project, index) => {
+              const isPowerBiProject =
+                project.name === 'E-Commerce Sales Dashboard'
+
+              return (
+                <article
+                  className={`project-card ${project.accent}`}
+                  key={project.name}
+                >
+                  {isPowerBiProject ? (
+                    <div className="project-art dashboard-carousel-card">
+                      <div className="training-project-label">
+                        Personal Project • GitHub Available
+                      </div>
+
+                      <img
+                        src={powerBiDashboardImages[powerBiSlide]}
+                        alt={`${project.name} dashboard ${powerBiSlide + 1}`}
+                        className="project-image"
+                      />
+
+                      <div className="dashboard-carousel-controls">
+                        <button
+                          type="button"
+                          className="dashboard-carousel-arrow"
+                          onClick={() => changePowerBiSlide(-1)}
+                          aria-label="Previous dashboard"
+                        >
+                          <ChevronLeft />
+                        </button>
+
+                        <div className="dashboard-carousel-status">
+                          <span>
+                            {powerBiSlide + 1} /{' '}
+                            {powerBiDashboardImages.length}
+                          </span>
+                        </div>
+
+                        <button
+                          type="button"
+                          className="dashboard-carousel-arrow"
+                          onClick={() => changePowerBiSlide(1)}
+                          aria-label="Next dashboard"
+                        >
+                          <ChevronRight />
+                        </button>
+                      </div>
+
+                      <div className="dashboard-carousel-dots">
+                        {powerBiDashboardImages.map((_, dotIndex) => (
+                          <button
+                            key={dotIndex}
+                            type="button"
+                            className={
+                              dotIndex === powerBiSlide
+                                ? 'dot active'
+                                : 'dot'
+                            }
+                            onClick={() => setPowerBiSlide(dotIndex)}
+                            aria-label={`View dashboard ${dotIndex + 1}`}
+                          />
+                        ))}
+                      </div>
+
+                      <span className="project-index">
+                        0{index + 1}
+                      </span>
+                    </div>
                   ) : (
-                    <div className="art-window">
-                      <div className="window-bar">
-                        <i />
-                        <i />
-                        <i />
-                      </div>
+                    <div className="project-art">
+                      {project.image ? (
+                        <img
+                          src={project.image}
+                          alt={`${project.name} preview`}
+                          className="project-image"
+                        />
+                      ) : (
+                        <div className="art-window">
+                          <div className="window-bar">
+                            <i />
+                            <i />
+                            <i />
+                          </div>
 
-                      <div className="art-lines">
-                        <span />
-                        <span />
-                        <span />
-                      </div>
+                          <div className="art-lines">
+                            <span />
+                            <span />
+                            <span />
+                          </div>
 
-                      <div className="art-blocks">
-                        <b />
-                        <b />
-                        <b />
-                      </div>
+                          <div className="art-blocks">
+                            <b />
+                            <b />
+                            <b />
+                          </div>
+                        </div>
+                      )}
+
+                      <span className="project-index">
+                        0{index + 1}
+                      </span>
                     </div>
                   )}
 
-                  <span className="project-index">
-                    0{index + 1}
-                  </span>
-                </div>
-
-                <div className="project-info">
-                  <div className="project-meta">
-                    <span>{project.category}</span>
-                    <span className="project-status">
-                      {project.status}
-                    </span>
-                  </div>
-
-                  <h3>{project.name}</h3>
-
-                  <p>{project.description}</p>
-
-                  <div className="project-footer">
-                    <div className="stack">
-                      {project.stack.map((item) => (
-                        <span key={item}>{item}</span>
-                      ))}
+                  <div className="project-info">
+                    <div className="project-meta">
+                      <span>{project.category}</span>
+                      <span className="project-status">
+                        {project.status}
+                      </span>
                     </div>
 
-                    <button
-                      className="round-button"
-                      onClick={() =>
-                        setSelectedProject(project)
-                      }
-                      aria-label={`View ${project.name} details`}
-                    >
-                      <ArrowUpRight />
-                    </button>
+                    <h3>{project.name}</h3>
+
+                    <p>{project.description}</p>
+
+                    <div className="project-footer">
+                      <div className="stack">
+                        {project.stack.map((item) => (
+                          <span key={item}>{item}</span>
+                        ))}
+                      </div>
+
+                      <button
+                        className="round-button"
+                        onClick={() => setSelectedProject(project)}
+                        aria-label={`View ${project.name} details`}
+                      >
+                        <ArrowUpRight />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              )
+            })}
           </div>
         </section>
 
@@ -1271,7 +1366,7 @@ export default function Page() {
               </h2>
 
               <p>
-                I&apos;m open to opportunities in system engineering,
+                I&apos;m open to opportunities in systems engineering,
                 frontend development, web development, cloud
                 technologies, and Data &amp; AI.
               </p>

@@ -5,7 +5,7 @@ import { profile, titleLine } from '@/lib/site-profile'
 
 export const metadata: Metadata = {
   title: `${profile.name} | ${titleLine}`,
-  description: `Portfolio of ${profile.name}, a System Engineer, frontend developer, and Data & AI enthusiast based in ${profile.location}.`,
+  description: `Portfolio of ${profile.name}, a Systems Engineer Trainee and Data & AI enthusiast based in ${profile.location}.`,
   generator: 'v0.app',
   openGraph: {
     title: `${profile.name} | ${titleLine}`,

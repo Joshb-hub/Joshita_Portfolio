@@ -9,7 +9,7 @@ export const profile = {
   firstName: 'Joshita',
   lastName: 'Bhattacharyya',
   initials: 'JB',
-  titles: ['System Engineer', 'Frontend Developer', 'Web Developer', 'Data & AI Enthusiast', 'Prompt Engineer','Cloud Engineer'] as const,
+  titles: ['Systems Engineer Trainee', 'Web Developer', 'Data & AI Enthusiast', 'Prompt Engineer', 'Cloud Engineer'] as const,
   location: 'Kolkata, India',
   email: 'joshitabhattacharyya@gmail.com',
   phone: '+91 95505 72523',

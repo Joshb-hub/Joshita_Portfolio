@@ -1,15 +1,23 @@
-# Personal Portfolio
+# Joshita Bhattacharyya — Portfolio
 
-Welcome to my personal portfolio website.
+Personal portfolio website showcasing my **skills, experience, projects, certifications, and achievements** as a Systems Engineer Trainee and Web Developer.
 
-This portfolio showcases my work, skills, experience, projects, and achievements as a frontend-focused developer with experience in React, Tailwind CSS, JavaScript, REST APIs, and data analytics.
+## Tech Stack
 
-Explore the website to learn more about my work and access my portfolio and professional profiles.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- JavaScript
 
 ## Live Portfolio
 
-Visit the live website to explore my complete portfolio, projects, and contact information.
+🔗 **[Visit My Portfolio](https://joshita-portfolio-virid.vercel.app/)**
+
+## GitHub
+
+🔗 **[GitHub Profile](https://github.com/Joshb-hub)**
 
 ---
 
-Thank you for visiting!
+© 2026 Joshita Bhattacharyya. All Rights Reserved.
