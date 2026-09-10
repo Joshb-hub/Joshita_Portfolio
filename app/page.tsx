@@ -232,19 +232,19 @@ const projects = [
       'Implemented Microsoft login, mode switching, chat history management, add-new-chat, delete-chat actions, and AI-assisted conversations, while using Azure and SQL Server for backend integration and persistence. This version excludes document search, which was handled separately in the backend-auth flow.',
   },
   {
-    name: 'MotoCafe',
+    name: 'Internal Project Collection',
     category: 'Web Development',
     status: 'In development',
-    type: ['Frontend', 'Cloud & Azure','Community'],
+    type: ['Frontend', 'Cloud & Azure', 'Community'],
     accent: 'cyan',
-    image: '/profile.png',
+    image: '/company_projects.png',
     github: '',
     live: '',
     description:
-      'A community-driven member portal and cafe platform where users can create accounts, log in, manage profiles, and access role-based community features.',
+      'A collection of anonymous internal company projects focused on user authentication, community workflows, profile management, and role-based access for business operations.',
     stack: ['Next.js', 'React', 'OAuth', 'Authorization', 'API Integration', 'Azure'],
     details:
-      'Led the frontend implementation for account creation, login, OAuth-based authentication, role and access authorization, community pages, member portal views, and profile management. I also connected the frontend to backend APIs, while the backend team and database team handled the server-side and data layer responsibilities.',
+      'Contributed to multiple internal platform experiences by implementing frontend flows for secure login, member onboarding, community features, profile management, and role-based access. The backend and database layers were handled by the respective team members, while I focused on API integration and the user-facing application experience.',
   },
 ]
 
