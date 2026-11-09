@@ -28,7 +28,7 @@ export const profile = {
   // TODO: add a professional photo at public/profile.jpg
   profileImage: '/profile.png',
   // TODO: add the latest resume PDF at public/resume.pdf
-  resume: '/resume.pdf',
+  resume: '/Joshita_Bhattacharyya_Resume.pdf',
 }
 
 export const titleLine = profile.titles.join(' | ')

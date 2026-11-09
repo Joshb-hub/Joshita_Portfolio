@@ -177,9 +177,9 @@ const projects = [
     status: 'Completed',
     type: 'AI Application',
     accent: 'violet',
-    image: '',
-    github: '',
-    live: '',
+    image: '/projects/aegis_rag.png',
+    github: 'https://github.com/Joshb-hub/AegisRAG',
+    live: 'https://arunabhocodes-aegisrag.hf.space/',
     description:
       'A query-adaptive PDF Q&A system that intelligently classifies user questions and dynamically adjusts retrieval depth to generate grounded answers from source documents.',
     stack: ['Python', 'FAISS', 'Streamlit', 'HuggingFace'],
