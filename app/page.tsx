@@ -974,10 +974,6 @@ export default function Page() {
                 >
                   {isPowerBiProject ? (
                     <div className="project-art dashboard-carousel-card">
-                      <div className="training-project-label">
-                        Personal Project • GitHub Available
-                      </div>
-
                       <img
                         src={powerBiDashboardImages[powerBiSlide]}
                         alt={`${project.name} dashboard ${powerBiSlide + 1}`}
