@@ -127,21 +127,6 @@ const skillGroups = [
 
 const projects = [
   {
-    name: 'EduBridge',
-    category: 'Education',
-    status: 'In development',
-    type: ['Backend & Full Stack', 'UI/UX'],
-    accent: 'violet',
-    image: '',
-    github: '',
-    live: '',
-    description:
-      'A centralized learning platform with structured subject navigation, categorized layouts, and reusable accessible UI components.',
-    stack: ['HTML', 'CSS', 'Tailwind CSS'],
-    details:
-      'Designed a clear information architecture around subject discovery, with responsive layouts and a consistent component language for learners.',
-  },
-  {
     name: 'SwasthyaSetu',
     category: 'Healthcare',
     status: 'In development',
@@ -960,7 +945,6 @@ export default function Page() {
               'Backend & Full Stack',
               'Cloud & Azure',
               'UI/UX',
-              'Education',
               'Healthcare',
               'Community',
             ].map((filter) => (
