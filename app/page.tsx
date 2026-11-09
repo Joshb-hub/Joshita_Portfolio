@@ -127,21 +127,6 @@ const skillGroups = [
 
 const projects = [
   {
-    name: 'SwasthyaSetu',
-    category: 'Healthcare',
-    status: 'In development',
-    type: ['Backend & Full Stack', 'UI/UX'],
-    accent: 'lime',
-    image: '',
-    github: '',
-    live: '',
-    description:
-      'A health awareness platform built to deliver structured, readable, and user-friendly informational content.',
-    stack: ['HTML', 'CSS', 'Tailwind CSS'],
-    details:
-      'Focused on readability, calm visual hierarchy, accessible navigation, and responsive content patterns for health education.',
-  },
-  {
     name: 'SkillSwap',
     category: 'Community',
     status: 'In development',
@@ -155,6 +140,21 @@ const projects = [
     stack: ['HTML', 'CSS', 'Tailwind CSS'],
     details:
       'Explored categorized profiles, skill listings, and intuitive interactions that make community discovery feel lightweight and welcoming.',
+  },
+  {
+    name: 'SwasthyaSetu',
+    category: 'Healthcare',
+    status: 'In development',
+    type: ['Backend & Full Stack', 'UI/UX'],
+    accent: 'lime',
+    image: '',
+    github: '',
+    live: '',
+    description:
+      'A health awareness platform built to deliver structured, readable, and user-friendly informational content.',
+    stack: ['HTML', 'CSS', 'Tailwind CSS'],
+    details:
+      'Focused on readability, calm visual hierarchy, accessible navigation, and responsive content patterns for health education.',
   },
   {
     name: 'AegisRAG',
